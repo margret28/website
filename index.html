@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      
+        <h1>My Music Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <form id="searchForm">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
+   
+    <main>
+
+        <div class="sidebar" id="sidebar">
+            <h2>Browse Categories</h2>
+            <ul>
+                <li><a href="#">New releases</a></li>
+                <li><a href="#">Tops charts</a></li>
+                <li><a href="#">Top Playlist</a></li>
+                <li><a href="#">New releases</a></li>
+                <li><a href="#">Tops charts</a></li>
+                <li><a href="#">Top Playlist</a></li>
+            </ul>
+        </div>
+
+        
+                <!--featured songs-->
+        <section class="featured">
+            <h2>Featured Songs</h2>
+            <div class="song">
+                <h3>Song Title 1</h3>
+                <p>Artist Name</p>
+                <audio controls>
+                    <source src="music/" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="share-buttons">
+                    <button class="share-facebook">Share on Facebook</button>
+                    <button class="share-twitter">Share on Twitter</button>
+                    <button class="share-instagram">Share on Instagram</button>
+                </div>
+            </div>
+            <!-- Add more songs here -->
+        </section>
+
+       
+        <section class="news">
+            <h2>Music News & Articles</h2>
+            <div id="newsContainer">
+                <!-- News and articles will be displayed here -->
+            </div>
+        </section>
+
+
+         <!-- reviews-->
+         <section class="reviews">
+            <h2>Reviews</h2>
+            <div id="reviewsContainer">
+                <!-- Reviews will be displayed here -->
+            </div>
+            <form id="reviewForm">
+                <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+                <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>  
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
