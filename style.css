@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #efcbcb;
+    background-color: #cbceef;
     color: hsl(0, 2%, 9%);
     padding: 20px;
 }
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 .sidebar {
-    background-color: #f4f4f4;
+    background-color: #cbceef;
     padding: 20px;
     width: 200px;
     position: fixed;
@@ -82,7 +82,7 @@ nav ul li a {
 }
 
 .sidebar ul li a {
-    color: #333;
+    color: #571617;
     text-decoration: none;
 }
 
@@ -92,8 +92,8 @@ nav ul li a {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #aecac5;
+    color: #3a042e;
     text-align: center;
     padding: 10px;
 }
@@ -243,7 +243,7 @@ main {
 
 /*for side bar*/
 .sidebar {
-    background-color: #f3c4c4;
+    background-color: #5fac83;
     padding: 20px;
     margin-right: 20px;
     width: 200px;
@@ -268,4 +268,124 @@ main {
     color: #333;
     text-decoration: none;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/*offering and discount*/
 
+.special-offers {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.special-offers h2 {
+    color: #333;
+}
+
+.offer {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.special-offers {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.special-offers h2 {
+    color: #333;
+}
+
+.offer {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+#apply-discount-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#apply-discount-btn:hover {
+    background-color: #45a049;
+}
+
+#discount-applied-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+/*interactive elements for real time updates*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.special-offers {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.special-offers h2 {
+    color: #333;
+}
+
+.offer {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+#apply-discount-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#apply-discount-btn:hover {
+    background-color: #45a049;
+}
+
+#discount-applied-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}

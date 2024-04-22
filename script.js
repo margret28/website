@@ -120,6 +120,82 @@ document.addEventListener("DOMContentLoaded", function() {
         sidebar.classList.toggle("active");
     });
 });
+//offers and discounts
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulated data (replace with actual API call)
+    const specialOffers = [
+        { title: "50% off on all albums", description: "Limited time offer! Grab your favorites now." },
+        { title: "Buy 2, Get 1 Free", description: "Special deal on selected albums." },
+        { title: "Free Shipping", description: "Enjoy free shipping on all orders above $50." }
+    ];
+
+    const offersContainer = document.getElementById("special-offers-list");
+
+    // Function to render special offers
+    function renderSpecialOffers(offers) {
+        offersContainer.innerHTML = "";
+        offers.forEach(offer => {
+            const offerDiv = document.createElement("div");
+            offerDiv.classList.add("offer");
+            offerDiv.innerHTML = `
+                <h3>${offer.title}</h3>
+                <p>${offer.description}</p>
+            `;
+            offersContainer.appendChild(offerDiv);
+        });
+    }
+
+    // Render special offers
+    renderSpecialOffers(specialOffers);
+});
+//interactive elements for real time updates
+document.addEventListener("DOMContentLoaded", function() {
+    const offersContainer = document.getElementById("special-offers-list");
+    const applyDiscountBtn = document.getElementById("apply-discount-btn");
+    const discountAppliedMessage = document.getElementById("discount-applied-message");
+
+    // Simulated special offers data
+    let specialOffers = [
+        { title: "50% off on all albums", description: "Limited time offer! Grab your favorites now." },
+        { title: "Buy 2, Get 1 Free", description: "Special deal on selected albums." },
+        { title: "Free Shipping", description: "Enjoy free shipping on all orders above $50." }
+    ];
+
+    // Function to render special offers
+    function renderSpecialOffers(offers) {
+        offersContainer.innerHTML = "";
+        offers.forEach(offer => {
+            const offerDiv = document.createElement("div");
+            offerDiv.classList.add("offer");
+            offerDiv.innerHTML = `
+                <h3>${offer.title}</h3>
+                <p>${offer.description}</p>
+            `;
+            offersContainer.appendChild(offerDiv);
+        });
+    }
+
+    // Function to apply discount
+    applyDiscountBtn.addEventListener("click", function() {
+        // Simulated discount applied
+        discountAppliedMessage.innerText = "Discount Applied!";
+    });
+
+    // Simulated backend integration to update offers in real-time
+    function updateOffers() {
+        // Simulated updated offers data
+        specialOffers.push(
+            { title: "10% off on all vinyls", description: "Exclusive offer for vinyl lovers!" }
+        );
+        renderSpecialOffers(specialOffers);
+    }
+
+    
+
+    // Initial rendering of offers
+    renderSpecialOffers(specialOffers);
+});
+
 
 
 
