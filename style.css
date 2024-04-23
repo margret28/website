@@ -169,6 +169,46 @@ main {
     background-color: #0056b3; /* Darker blue color on hover */
 }
 
+/* styles.css */
+#albumContainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.album {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#loadMore {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loadMore:hover {
+    background-color: #0056b3;
+}
+
+
 
 /* styles.css */
 #reviewForm {
@@ -272,7 +312,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}/* styles.css */
+#albumContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+.album {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
 /*offering and discount*/
 
 .special-offers {

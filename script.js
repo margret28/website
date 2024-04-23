@@ -75,6 +75,82 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreBtn = document.getElementById('loadMore');
+    let albumCount = 0;
+
+    loadMoreBtn.addEventListener('click', function() {
+        albumCount += 4;  // Number of albums to load each time
+        fetchAlbums(albumCount);
+    });
+
+    function fetchAlbums(count) {
+        // Simulated data for demonstration
+        const albums = [
+            { title: 'Album 1', image: 'album1.jpg' },
+            { title: 'Album 2', image: 'album2.jpg' },
+            { title: 'Album 3', image: 'album3.jpg' },
+            { title: 'Album 4', image: 'album4.jpg' },
+            { title: 'Album 5', image: 'album5.jpg' },
+            { title: 'Album 6', image: 'album6.jpg' },
+            { title: 'Album 7', image: 'album7.jpg' },
+            { title: 'Album 8', image: 'album8.jpg' }
+            // Add more albums as needed
+        ];
+
+        const albumContainer = document.getElementById('albumContainer');
+        albumContainer.innerHTML = ''; // Clear existing albums
+
+        // Display albums up to the specified count
+        for (let i = 0; i < count && i < albums.length; i++) {
+            const album = albums[i];
+            const albumDiv = document.createElement('div');
+            albumDiv.className = 'album';
+            albumDiv.innerHTML = `
+                <img src="images/${album.image}" alt="${album.title}">
+                <h3>${album.title}</h3>
+            `;
+            albumContainer.appendChild(albumDiv);
+        }// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const albumContainer = document.getElementById('albumContainer');
+
+    fetch('https://api.example.com/albums')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            data.forEach(album => {
+                const albumDiv = document.createElement('div');
+                albumDiv.className = 'album';
+                albumDiv.innerHTML = `
+                    <img src="${album.imageUrl}" alt="${album.title}">
+                    <h3>${album.title}</h3>
+                    <p>${album.artist}</p>
+                `;
+                albumContainer.appendChild(albumDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching albums:', error);
+        });
+});
+
+
+
+        // Hide the "Load More" button if all albums are loaded
+        if (count >= albums.length) {
+            loadMoreBtn.style.display = 'none';
+        }
+    }
+
+    // Initially load some albums
+    fetchAlbums(4);
+});
 
 
     // Sample data for news and articles (you can replace it with your own data)
